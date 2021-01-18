@@ -2,17 +2,16 @@
 class Para < Formula
   desc "A useful tool for software package manager analytics."
   homepage "https://github.com/halseylabs/para"
-  version "0.3.0"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/halseylabs/para/releases/download/v0.3.0/para-v0.3.0-macos-amd64.tar.gz"
-    sha256 "ec2156d2c9d1f5775167c6eee7f0352ee26c42ab0b677c90fb462b673e226f12"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/halseylabs/para/releases/download/v0.3.0/para-v0.3.0-linux-amd64.tar.gz"
-      sha256 "15d4850cd2f1bd4ebed65c4279086ace223a93b5bd69913c5f62e99770fb2049"
-    end
+    url "https://github.com/halseylabs/para/releases/download/v0.4.0/para-v0.4.0-macos-amd64.tar.gz"
+    sha256 "7f2acb7791462281162c7e9e9e0e596845691c0aced18a11081703bdf81ca465"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/halseylabs/para/releases/download/v0.4.0/para-v0.4.0-linux-amd64.tar.gz"
+    sha256 "e8fb98a8b8fbdce677e22c231aa608975db9cab32c2bcde6eb97b06f08ce40cd"
   end
 
   def install
